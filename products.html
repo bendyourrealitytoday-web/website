@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Complete Systems for Remote Work Success</title>
+    <meta name="description" content="Transform your remote work experience with proven systems. Energy management, boundary-setting, burnout prevention, and sustainable productivity.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .product-detail-hero {
+            padding: 80px 0 60px;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+        }
+        
+        .product-detail-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 60px;
+        }
+        
+        .product-header {
+            padding: 60px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            text-align: center;
+        }
+        
+        .product-icon-hero {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        
+        .product-header h1 {
+            font-size: 42px;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+        
+        .product-header .tagline {
+            font-size: 22px;
+            color: var(--text-medium);
+            margin-bottom: 32px;
+        }
+        
+        .product-price-box {
+            display: inline-block;
+            background: white;
+            padding: 20px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .price-label {
+            font-size: 14px;
+            color: var(--text-medium);
+            margin-bottom: 8px;
+        }
+        
+        .price-amount {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .product-body {
+            padding: 60px;
+        }
+        
+        .what-you-get {
+            margin-bottom: 50px;
+        }
+        
+        .what-you-get h2 {
+            font-size: 32px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .module-card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .module-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+        
+        .module-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+        
+        .module-card ul {
+            list-style: none;
+            color: var(--text-medium);
+        }
+        
+        .module-card ul li {
+            padding: 8px 0 8px 24px;
+            position: relative;
+        }
+        
+        .module-card ul li:before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .who-for-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 50px 0;
+        }
+        
+        .who-box {
+            padding: 40px;
+            border-radius: 12px;
+        }
+        
+        .who-for {
+            background: rgba(72, 187, 120, 0.1);
+            border: 2px solid var(--success);
+        }
+        
+        .who-not-for {
+            background: rgba(229, 62, 62, 0.05);
+            border: 2px solid #fc8181;
+        }
+        
+        .who-box h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .who-box ul {
+            list-style: none;
+        }
+        
+        .who-box ul li {
+            padding: 12px 0 12px 32px;
+            position: relative;
+            font-size: 16px;
+        }
+        
+        .who-for ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .who-not-for ul li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #fc8181;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .guarantee-box {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe4b3 100%);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 50px 0;
+            border: 3px dashed var(--accent);
+        }
+        
+        .guarantee-box h3 {
+            font-size: 28px;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+        
+        .guarantee-box p {
+            font-size: 18px;
+            color: var(--text-medium);
+        }
+        
+        .cta-box {
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+            border-radius: 12px;
+        }
+        
+        .cta-box h3 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+        
+        .cta-box p {
+            font-size: 18px;
+            color: var(--text-medium);
+            margin-bottom: 32px;
+        }
+        
+        @media (max-width: 768px) {
+            .product-header {
+                padding: 40px 30px;
+            }
+            
+            .product-header h1 {
+                font-size: 32px;
+            }
+            
+            .product-body {
+                padding: 40px 30px;
+            }
+            
+            .who-for-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">Remote<strong>Flow</strong></span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="free-guide.html">Free Guide</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="free-guide.html" class="btn btn-primary">Get Free Guide</a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="product-detail-hero">
+        <div class="container">
+            <div class="section-header">
+                <h2>Complete Systems for Remote Work Mastery</h2>
+                <p class="section-subtitle">Not just tactics. Complete transformation frameworks designed specifically for remote workers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product 1: Work-From-Home Engine -->
+    <section id="wfh-engine" style="padding: 0 0 60px 0;">
+        <div class="container">
+            <div class="product-detail-card">
+                <div class="product-header">
+                    <div class="product-icon-hero">🚀</div>
+                    <h1>The Stress-Free Work-From-Home Engine</h1>
+                    <p class="tagline">The complete operating system for sustainable remote work productivity</p>
+                    <div class="product-price-box">
+                        <div class="price-label">One-Time Investment</div>
+                        <div class="price-amount">$47</div>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <div class="what-you-get">
+                        <h2>What's Inside This Complete System</h2>
+                        <p style="text-align: center; font-size: 18px; color: var(--text-medium); max-width: 700px; margin: 0 auto 40px;">
+                            Stop piecing together random productivity hacks. Get the complete framework that covers energy management, boundaries, burnout prevention, and sustainable productivity.
+                        </p>
+
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <div class="module-icon">📊</div>
+                                <h3>Energy Optimization Framework</h3>
+                                <ul>
+                                    <li>Identify your peak performance hours</li>
+                                    <li>Match tasks to energy levels</li>
+                                    <li>Optimize your daily rhythm</li>
+                                    <li>Faster recovery between sessions</li>
+                                    <li>Weekly energy audits</li>
+                                </ul>
+                            </div>
+
+                            <div class="module-card">
+                                <div class="module-icon">🛡️</div>
+                                <h3>Boundary Blueprint</h3>
+                                <ul>
+                                    <li>Set work hours that actually stick</li>
+                                    <li>Say "no" without guilt</li>
+                                    <li>Physical & mental separation</li>
+                                    <li>Handle "just one more thing" requests</li>
+                                    <li>Word-for-word scripts</li>
+                                </ul>
+                            </div>
+
+                            <div class="module-card">
+                                <div class="module-icon">🔥</div>
+                                <h3>Burnout Prevention System</h3>
+                                <ul>
+                                    <li>Early warning signs checklist</li>
+                                    <li>Weekly prevention protocols</li>
+                                    <li>Monthly recharge strategies</li>
+                                    <li>Quarterly deep recovery</li>
+                                    <li>Sustainable pace calculator</li>
+                                </ul>
+                            </div>
+
+                            <div class="module-card">
+                                <div class="module-icon">⚙️</div>
+                                <h3>Complete WFH Operating System</h3>
+                                <ul>
+                                    <li>Morning routines that energize</li>
+                                    <li>Midday reset practices</li>
+                                    <li>Evening shutdown rituals</li>
+                                    <li>Weekend recharge strategies</li>
+                                    <li>Workspace optimization</li>
+                                </ul>
+                            </div>
+
+                            <div class="module-card">
+                                <div class="module-icon">📝</div>
+                                <h3>30+ Ready-to-Use Templates</h3>
+                                <ul>
+                                    <li>Daily planning sheets</li>
+                                    <li>Weekly review frameworks</li>
+                                    <li>Energy tracking tools</li>
+                                    <li>Boundary-setting scripts</li>
+                                    <li>Focus block templates</li>
+                                </ul>
+                            </div>
+
+                            <div class="module-card">
+                                <div class="module-icon">🎯</div>
+                                <h3>Implementation Guides</h3>
+                                <ul>
+                                    <li>30-day quick start plan</li>
+                                    <li>Week-by-week roadmap</li>
+                                    <li>Troubleshooting guide</li>
+                                    <li>Common mistakes to avoid</li>
+                                    <li>Progress tracking system</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="who-for-section">
+                        <div class="who-box who-for">
+                            <h3>✓ Perfect If You:</h3>
+                            <ul>
+                                <li>Work from home full-time or hybrid</li>
+                                <li>Feel productive but exhausted</li>
+                                <li>Struggle to "switch off" after work</li>
+                                <li>Want sustainable productivity</li>
+                                <li>Need a complete system (not just tactics)</li>
+                                <li>Feel overwhelmed by all the advice</li>
+                                <li>Want to actually enjoy WFH life</li>
+                            </ul>
+                        </div>
+
+                        <div class="who-box who-not-for">
+                            <h3>✗ Not Right If You:</h3>
+                            <ul>
+                                <li>Only want quick hacks</li>
+                                <li>Don't work from home</li>
+                                <li>Prefer to figure it out yourself</li>
+                                <li>Aren't ready to invest in yourself</li>
+                                <li>Want overnight results</li>
+                                <li>Don't plan to implement</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="guarantee-box">
+                        <h3>🎁 30-Day Money-Back Guarantee</h3>
+                        <p>Try the entire system risk-free. If it doesn't transform your WFH experience in 30 days, email me for a full refund. No questions asked.</p>
+                    </div>
+
+                    <div class="cta-box">
+                        <h3>Ready to Master Working From Home?</h3>
+                        <p>Get instant access to the complete system + all templates and guides</p>
+                        <a href="https://quitania.gumroad.com/l/ptcpow" class="btn btn-large btn-primary" target="_blank">
+                            Get The Work-From-Home Engine - $47
+                        </a>
+                        <p style="font-size: 14px; margin-top: 16px; color: var(--text-light);">
+                            Instant digital download • Lifetime access • All future updates included
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product 2: Generosity & Receiving Blueprint -->
+    <section id="generosity-blueprint" style="padding: 0 0 80px 0;">
+        <div class="container">
+            <div class="product-detail-card">
+                <div class="product-header">
+                    <div class="product-icon-hero">💝</div>
+                    <h1>The Generosity & Receiving Blueprint</h1>
+                    <p class="tagline">Transform your relationship with giving and receiving to create abundance</p>
+                    <div class="product-price-box">
+                        <div class="price-label">One-Time Investment</div>
+                        <div class="price-amount">$37</div>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <div class="what-you-get">
+                        <h2>What's Inside This Complete System</h2>
+                        <p style="text-align: center; font-size: 18px; color: var(--text-medium); max-width: 700px; margin: 0 auto 40px;">
+                            Learn to give without depletion, receive without guilt, and build reciprocal relationships that create abundance in your work and life.
+                        </p>
+
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <div class="module-icon">🎁</div>
+                                <h3>The Generosity Framework</h3>
+                                <ul>
+                                    <li>Give from overflow, not depletion</li>
+                                    <li>Set healthy giving boundaries</li>
+                                    <li>Recognize one-sided relationships</li>
+                                    <li>Create sustainable generosity</li>
+                                    <li>Balance giving & receiving</li>
+                                </ul>
+                            </div>
+
+                            <div class="module-card">
+                                <div class="module-icon">🙏</div>
+                                <h3>Receiving Without Guilt</h3>
+                                <ul>
+                                    <li>Overcome receiving resistance</li>
+                                    <li>Accept help gracefully</li>
+                                    <li>Recognize your worth</li>
+                                    <li>Stop deflecting compliments</li>
+                                    <li>Allow support in</li>
+                                </ul>
+                            </div>
+
+                            <div class="module-card">
+                                <div class="module-icon">🤝</div>
+                                <h3>Reciprocal Relationships</h3>
+                                <ul>
+                                    <li>Build mutual support systems</li>
+                                    <li>Identify healthy vs. draining relationships</li>
+                                    <li>Create win-win collaborations</li>
+                                    <li>Attract reciprocal people</li>
+                                    <li>Nurture balanced connections</li>
+                                </ul>
+                            </div>
+
+                            <div class="module-card">
+                                <div class="module-icon">✨</div>
+                                <h3>Abundance Mindset Shift</h3>
+                                <ul>
+                                    <li>Move from scarcity to abundance</li>
+                                    <li>Recognize opportunities</li>
+                                    <li>Trust the flow of giving/receiving</li>
+                                    <li>Release control and attachment</li>
+                                    <li>Practice grateful receiving</li>
+                                </ul>
+                            </div>
+
+                            <div class="module-card">
+                                <div class="module-icon">💡</div>
+                                <h3>Practical Exercises</h3>
+                                <ul>
+                                    <li>Daily receiving practice</li>
+                                    <li>Generosity boundary audit</li>
+                                    <li>Relationship mapping tool</li>
+                                    <li>Giving/receiving journal prompts</li>
+                                    <li>30-day transformation tracker</li>
+                                </ul>
+                            </div>
+
+                            <div class="module-card">
+                                <div class="module-icon">🎯</div>
+                                <h3>Implementation Guide</h3>
+                                <ul>
+                                    <li>Quick start action plan</li>
+                                    <li>Common blocks & solutions</li>
+                                    <li>Real-life examples</li>
+                                    <li>Troubleshooting guide</li>
+                                    <li>Progress milestones</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="who-for-section">
+                        <div class="who-box who-for">
+                            <h3>✓ Perfect If You:</h3>
+                            <ul>
+                                <li>Give constantly but feel depleted</li>
+                                <li>Struggle to receive help or compliments</li>
+                                <li>Feel guilty accepting support</li>
+                                <li>Want better relationships</li>
+                                <li>Attract takers instead of givers</li>
+                                <li>Feel unworthy of receiving</li>
+                                <li>Want to create more abundance</li>
+                            </ul>
+                        </div>
+
+                        <div class="who-box who-not-for">
+                            <h3>✗ Not Right If You:</h3>
+                            <ul>
+                                <li>Already have perfect balance</li>
+                                <li>Don't want to examine patterns</li>
+                                <li>Prefer to stay in scarcity</li>
+                                <li>Aren't open to mindset shifts</li>
+                                <li>Want tactical productivity only</li>
+                                <li>Don't value relationships</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="guarantee-box">
+                        <h3>🎁 30-Day Money-Back Guarantee</h3>
+                        <p>Try this system risk-free. If it doesn't shift how you give and receive in 30 days, email me for a full refund. No questions asked.</p>
+                    </div>
+
+                    <div class="cta-box">
+                        <h3>Ready to Transform Your Relationships?</h3>
+                        <p>Get instant access to the complete blueprint + all exercises and tools</p>
+                        <a href="https://quitania.gumroad.com/l/pmuhd" class="btn btn-large btn-primary" target="_blank">
+                            Get The Generosity Blueprint - $37
+                        </a>
+                        <p style="font-size: 14px; margin-top: 16px; color: var(--text-light);">
+                            Instant digital download • Lifetime access • All future updates included
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bundle Offer -->
+    <section style="padding: 80px 0; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white;">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: 42px; margin-bottom: 20px;">Get Both Systems & Save</h2>
+                <p style="font-size: 20px; margin-bottom: 40px; opacity: 0.95;">
+                    Transform both your work systems AND your relationships. These complement each other perfectly.
+                </p>
+                <div style="background: white; color: var(--text-dark); padding: 40px; border-radius: 20px; margin-bottom: 40px;">
+                    <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 16px;">Complete Bundle</p>
+                    <p style="font-size: 24px; text-decoration: line-through; color: var(--text-light); margin-bottom: 8px;">$84 separately</p>
+                    <p style="font-size: 56px; font-weight: 800; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px;">$69</p>
+                    <p style="font-size: 18px; color: var(--success); font-weight: 600;">Save $15 (18% off)</p>
+                </div>
+                <a href="https://quitania.gumroad.com/" class="btn btn-large btn-white" target="_blank">
+                    Get The Bundle - Save $15
+                </a>
+                <p style="font-size: 14px; margin-top: 20px; opacity: 0.8;">
+                    Both products • All templates • Lifetime access • 30-day guarantee
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>RemoteFlow</h4>
+                    <p>Simple systems for remote work productivity, energy, and balance.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#wfh-engine">Work-From-Home Engine</a></li>
+                        <li><a href="#generosity-blueprint">Generosity Blueprint</a></li>
+                        <li><a href="free-guide.html">Free Focus Reset</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>Get weekly productivity tips for remote workers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-small btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RemoteFlow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
