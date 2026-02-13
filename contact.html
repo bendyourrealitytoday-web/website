@@ -41,6 +41,8 @@
         <div class="container">
             <div style="max-width: 600px; margin: 0 auto;">
                 <form id="contact-form" style="background: white; padding: 50px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                    <form name="contact" method="POST" data-netlify="true">
+                        <input type="hidden" name="form-name" value="contact">
                     <div style="margin-bottom: 24px;">
                         <label style="display: block; margin-bottom: 8px; font-weight: 600;">Name</label>
                         <input type="text" name="name" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 16px;">
